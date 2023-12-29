@@ -10,7 +10,7 @@ function App() {
   return (
     <div
       id="top"
-      className="App lg:top-0  bg-slate-900 text-slate-400 max-h-screen font-thin"
+      className="App lg:top-0 bg-slate-900 text-slate-400 max-h-screen font-thin"
     >
       <a
         href="#top"
@@ -18,6 +18,10 @@ function App() {
       >
         <img src={up} alt="Go to top of page" className="max-h-8 " />
       </a>
+
+      <div className="fixed top-10 -left-8 w-72 h-72 bg-pink-300 rounded-full filter blur-2xl translate(0px 0px) opacity-5 animate-blob "></div>
+      <div className="fixed top-12 right-8 w-72 h-72 bg-sky-300 rounded-full filter blur-2xl translate(0px 0px)  opacity-5 animate-blob1"></div>
+      <div className="fixed bottom-8 left-36 w-96 h-96 bg-green-400 rounded-full filter blur-2xl translate(0px 0px)  opacity-5 animate-blob2"></div>
       <div className=" mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
         <div id="wrapper" className="lg:flex lg:justify-between lg:gap-4">
           <header
@@ -27,10 +31,13 @@ function App() {
               "
           >
             <div className="flex flex-col justify-gap gap-4">
-              <h1 className="text-4xl font-bold tracking-tight text-sky-400 sm:text-5xl">
+              <h1
+                className=" text-4xl font-bold leading-6 text-white/10 sm:text-5xl
+                            bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text"
+              >
                 Craig Davison
               </h1>
-              <h2 className="text-2xl font-medium  text-sky-200">
+              <h2 className="text-2xl font-medium text-sky-200">
                 Full Stack Web Developer
               </h2>
               <p>Building solutions to manage your business!</p>
