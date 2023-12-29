@@ -14,7 +14,7 @@ function App() {
     >
       <a
         href="#top"
-        className="h-10 w-10 border bg-slate-900 border-sky-400 fixed bottom-4 right-4 flex justify-center justify-items-center rounded-md"
+        className="z-10 h-10 w-10 border bg-slate-900 border-sky-400 fixed bottom-4 right-4 flex justify-center justify-items-center rounded-md"
       >
         <img src={up} alt="Go to top of page" className="max-h-8 " />
       </a>
