@@ -41,7 +41,7 @@ function App() {
                 Full Stack Web Developer
               </h2>
               <p>Building solutions to manage your business!</p>
-              <p>
+              <p className="z-10">
                 <Navigation />
               </p>
             </div>
