@@ -14,7 +14,7 @@ function App() {
     >
       <a
         href="#top"
-        className="h-10 w-10 border border-sky-400 fixed bottom-4 right-4 flex justify-center justify-items-center rounded-md"
+        className="h-10 w-10 border bg-slate-900 border-sky-400 fixed bottom-4 right-4 flex justify-center justify-items-center rounded-md"
       >
         <img src={up} alt="Go to top of page" className="max-h-8 " />
       </a>
@@ -22,7 +22,9 @@ function App() {
         <div id="wrapper" className="lg:flex lg:justify-between lg:gap-4">
           <header
             id="header"
-            className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24"
+            className="md:h-auto 
+              lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24
+              "
           >
             <div className="flex flex-col justify-gap gap-4">
               <h1 className="text-4xl font-bold tracking-tight text-sky-400 sm:text-5xl">
