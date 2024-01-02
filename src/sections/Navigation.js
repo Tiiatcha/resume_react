@@ -19,12 +19,12 @@ function Navigation() {
         {navOpen ? (
           <AiOutlineClose
             size={20}
-            className="lg:hidden fixed top-5 right-5 text-sky-500"
+            className="lg:hidden fixed top-10 right-5 bg-slate-900 text-sky-500"
           />
         ) : (
           <AiOutlineMenu
             size={20}
-            className="lg:hidden fixed top-5 right-5 text-sky-500"
+            className="lg:hidden fixed top-10 right-5 bg-slate-900 text-sky-500"
           />
         )}
       </div>
