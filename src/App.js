@@ -19,8 +19,8 @@ function App() {
         <img src={up} alt="Go to top of page" className="max-h-8 " />
       </a>
 
-      <div className="fixed top-10 -left-8 w-72 h-72 bg-pink-300 rounded-full filter blur-2xl translate(0px 0px) opacity-5 animate-blob "></div>
-      <div className="fixed top-12 right-8 w-72 h-72 bg-sky-300 rounded-full filter blur-2xl translate(0px 0px)  opacity-5 animate-blob1"></div>
+      <div className="fixed top-10 -left-8 w-72 h-72 bg-pink-400 rounded-full filter blur-2xl translate(0px 0px) opacity-5 animate-blob "></div>
+      <div className="fixed top-12 right-8 w-72 h-72 bg-sky-400 rounded-full filter blur-2xl translate(0px 0px)  opacity-5 animate-blob1"></div>
       <div className="fixed bottom-8 left-36 w-96 h-96 bg-green-400 rounded-full filter blur-2xl translate(0px 0px)  opacity-5 animate-blob2"></div>
       <div className=" mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
         <div id="wrapper" className="lg:flex lg:justify-between lg:gap-4">
@@ -50,14 +50,19 @@ function App() {
             </p>
           </header>
           <main className="pt-20 lg:w-1/2 lg:py-24">
-            <div className="mb-20">
+            <div className="mb-10">
               <About id="about" />
             </div>
             <div id="experience" className="mb-20">
+              <h4 className="text-4xl font-extrabold text-slate-800">
+                Experience
+              </h4>
               <Experience />
             </div>
             <div id="projects" className="mb-20">
-              <h4>Projects</h4>
+              <h4 className="text-4xl font-extrabold text-slate-800">
+                Projects
+              </h4>
               <Projects />
             </div>
           </main>

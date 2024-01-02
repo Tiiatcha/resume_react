@@ -39,14 +39,26 @@ function Project({
         <section>{problem}</section>
         <h4 className="font-normal">Solution Development</h4>
         <section>{solution}</section>
-        <h4 className="font-normal">Team Management & Methodology</h4>
-        <section>{management}</section>
-        <h4 className="font-normal">Outcome and Impact</h4>
-        <section>{impact}</section>
-        <h4 className="font-normal">
-          Personal Contribution and Skills Highlight
-        </h4>
-        <section>{contribution}</section>
+        {management && (
+          <>
+            <h4 className="font-normal">Team Management & Methodology</h4>
+            <section>{management}</section>
+          </>
+        )}
+        {impact && (
+          <>
+            <h4 className="font-normal">Outcome and Impact</h4>
+            <section>{impact}</section>
+          </>
+        )}
+        {contribution && (
+          <>
+            <h4 className="font-normal">
+              Personal Contribution and Skills Highlight
+            </h4>
+            <section>{contribution}</section>
+          </>
+        )}
         <div className="flex justify-gap">
           {tags.map((tag, i) => (
             <Tag tag={tag} key={i} />
