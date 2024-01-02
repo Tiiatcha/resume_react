@@ -31,10 +31,8 @@ function Navigation() {
 
       <div
         className={`${
-          navOpen
-            ? "lg:hidden fixed left-0 top-0 w-[80%] h-full border-r border-slate-800 bg-slate-900"
-            : "lg:hidden fixed left-[-90%] top-0"
-        } ease-in-out duration-300
+          navOpen ? "left-0 " : "left-[-90%]"
+        } lg:hidden fixed top-0 w-[80%] h-full border-r border-slate-800 bg-slate-900 ease-in-out duration-300
         `}
       >
         <ul className=" lg:flex lg:justify-gap lg:gap-4 relative p-4 pt-20">
