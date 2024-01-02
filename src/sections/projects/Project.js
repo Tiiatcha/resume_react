@@ -23,14 +23,7 @@ function Project({
           <div className="flex-1">
             <p className="font-normal flex justify-gap gap-2">
               {title}
-              {url && (
-                <a href={url} target="blank">
-                  <img
-                    className="max-h-4 hover:max-h-5 duration-200"
-                    src={link}
-                  />
-                </a>
-              )}
+              <Url url={url} />
             </p>
             <p className="text-sky-200">{type}</p>
           </div>
@@ -39,26 +32,9 @@ function Project({
         <section>{problem}</section>
         <h4 className="font-normal">Solution Development</h4>
         <section>{solution}</section>
-        {management && (
-          <>
-            <h4 className="font-normal">Team Management & Methodology</h4>
-            <section>{management}</section>
-          </>
-        )}
-        {impact && (
-          <>
-            <h4 className="font-normal">Outcome and Impact</h4>
-            <section>{impact}</section>
-          </>
-        )}
-        {contribution && (
-          <>
-            <h4 className="font-normal">
-              Personal Contribution and Skills Highlight
-            </h4>
-            <section>{contribution}</section>
-          </>
-        )}
+        <Management management={management} />
+        <Impact impact={impact} />
+        <Contribution contribution={contribution} />
         <div className="flex justify-gap">
           {tags.map((tag, i) => (
             <Tag tag={tag} key={i} />
@@ -66,6 +42,45 @@ function Project({
         </div>
       </div>
     </div>
+  );
+}
+function Url({ url }) {
+  if (!url) return null;
+  return (
+    <>
+      <a href={url} target="blank">
+        <img className="max-h-4 hover:max-h-5 duration-200" src={link} />
+      </a>
+    </>
+  );
+}
+function Management({ management }) {
+  if (!management) return null;
+  return (
+    <>
+      <h4 className="font-normal">Team Management & Methodology</h4>
+      <section>{management}</section>
+    </>
+  );
+}
+function Impact({ impact }) {
+  if (!impact) return null;
+  return (
+    <>
+      <h4 className="font-normal">Outcome and Impact</h4>
+      <section>{impact}</section>
+    </>
+  );
+}
+function Contribution({ contribution }) {
+  if (!contribution) return null;
+  return (
+    <>
+      <h4 className="font-normal">
+        Personal Contribution and Skills Highlight
+      </h4>
+      <section>{contribution}</section>
+    </>
   );
 }
 

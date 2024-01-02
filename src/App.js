@@ -14,9 +14,9 @@ function App() {
     >
       <a
         href="#top"
-        className="z-10 h-10 w-10 border bg-slate-900 border-sky-400 fixed bottom-4 right-4 flex justify-center justify-items-center rounded-md"
+        className=" hidden z-10 h-6 w-6 border bg-slate-900 border-sky-400 fixed bottom-4 right-4 flex justify-center justify-items-center rounded-md"
       >
-        <img src={up} alt="Go to top of page" className="max-h-8 " />
+        <img src={up} alt="Go to top of page" className="max-h-4 " />
       </a>
 
       <div className="fixed top-10 -left-8 w-72 h-72 bg-pink-400 rounded-full filter blur-2xl translate(0px 0px) opacity-5 animate-blob "></div>

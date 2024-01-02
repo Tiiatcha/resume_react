@@ -5,7 +5,7 @@ function Projects() {
   return (
     <div>
       <Project
-        date="July 2023"
+        date="July 2022"
         title="CEASE Hair Salon"
         url="https://ceasesalon.co.uk"
         type="Brochure Site"
