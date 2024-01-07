@@ -1,6 +1,6 @@
 import React from "react";
-import ExperienceCard from "./ExperienceCard";
-import Tag from "./Tag";
+import ExperienceCard from "../components/Cards/Experience";
+import Tag from "../components/Tag";
 
 function Experience() {
   return (

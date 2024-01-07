@@ -1,5 +1,5 @@
 import React from "react";
-//after:content-['*'] after:bg-sky-400 h-[3px] after:w-[50%] after:left-0 after:-bottom-[5px] after:absolute duration-300
+
 function NavigationItem({ title, url, onClick }) {
   return (
     <li
