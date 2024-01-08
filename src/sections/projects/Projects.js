@@ -1,9 +1,10 @@
 import React from "react";
+import Section from "../../components/Section";
 import Project from "../../components/Cards/Project";
 
 function Projects() {
   return (
-    <div>
+    <Section id="projects" title="Projects">
       <Project
         date="July 2022"
         title="CEASE Hair Salon"
@@ -255,7 +256,7 @@ function Projects() {
         }
         tags={["HTML", "CSS", "SAP UI5", "JavaScript"]}
       />
-    </div>
+    </Section>
   );
 }
 

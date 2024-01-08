@@ -16,7 +16,7 @@ function Project({
   tags,
 }) {
   return (
-    <div className="flex mt-4 p-4 hover:backdrop-opacity-5 hover:backdrop-invert hover:bg-sky/5 text-white  rounded-[3px] duration-300">
+    <div className="flex mb-4 p-4 hover:backdrop-opacity-5 hover:backdrop-invert hover:bg-sky/5 text-white  rounded-[3px] duration-300">
       <div>
         <div className=" pb-2 mb-2 flex justify-gap gap-4 text-sky-400">
           <div className="font-normal">{date}</div>

@@ -6,6 +6,9 @@ import Technologies from "./sections/Technologies";
 import Projects from "./sections/projects/Projects";
 import up from "./assets/icons8-up-48.png";
 import ProgressBar from "./components/ScrollProgressBar";
+import Contact from "./sections/ContactForm";
+import ContactDetails from "./sections/ContactDetails";
+import OrbitalColors from "./components/Backgrouds/OrbitalColors";
 
 function App() {
   return (
@@ -15,16 +18,7 @@ function App() {
         id="top"
         className="relative App lg:top-0 bg-slate-900 text-slate-400 max-h-screen font-thin"
       >
-        <a
-          href="#top"
-          className=" hidden z-10 h-6 w-6 border bg-slate-900 border-sky-400 fixed bottom-4 right-4 flex justify-center justify-items-center rounded-md"
-        >
-          <img src={up} alt="Go to top of page" className="max-h-4 " />
-        </a>
-
-        <div className="fixed top-10 -left-8 w-72 h-72 bg-pink-400 rounded-full filter blur-2xl translate(0px 0px) opacity-5 animate-blob "></div>
-        <div className="fixed top-12 right-8 w-72 h-72 bg-sky-400 rounded-full filter blur-2xl translate(0px 0px)  opacity-5 animate-blob1"></div>
-        <div className="fixed bottom-8 left-36 w-96 h-96 bg-green-400 rounded-full filter blur-2xl translate(0px 0px)  opacity-5 animate-blob2"></div>
+        <OrbitalColors />
         <div className=" mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
           <div id="wrapper" className="lg:flex lg:justify-between lg:gap-4">
             <header
@@ -48,6 +42,9 @@ function App() {
                   <Navigation />
                 </p>
               </div>
+              <p>
+                <ContactDetails />
+              </p>
               <p className="pt-20">
                 <Technologies />
               </p>
@@ -56,18 +53,10 @@ function App() {
               <div className="mb-10">
                 <About id="about" />
               </div>
-              <div id="experience" className="mb-20">
-                <h4 className="text-4xl font-extrabold text-slate-800">
-                  Experience
-                </h4>
-                <Experience />
-              </div>
-              <div id="projects" className="mb-20">
-                <h4 className="text-4xl font-extrabold text-slate-800">
-                  Projects
-                </h4>
-                <Projects />
-              </div>
+
+              <Experience />
+
+              <Projects />
             </main>
           </div>
         </div>

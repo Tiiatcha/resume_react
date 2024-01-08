@@ -1,10 +1,11 @@
 import React from "react";
 import ExperienceCard from "../components/Cards/Experience";
 import Tag from "../components/Tag";
+import Section from "../components/Section";
 
 function Experience() {
   return (
-    <div>
+    <Section id="experience" title="Experience">
       <ExperienceCard
         from="2017"
         to="Aug 2023"
@@ -92,7 +93,7 @@ function Experience() {
           </div>
         </div>
       </ExperienceCard>
-    </div>
+    </Section>
   );
 }
 
