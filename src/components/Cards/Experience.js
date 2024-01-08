@@ -2,7 +2,7 @@ import React from "react";
 
 function ExperienceCard({ from, to, id, company, title, children }) {
   return (
-    <div className="flex p-4 hover:backdrop-opacity-5 hover:backdrop-invert hover:bg-sky/5 text-white  rounded-[3px] duration-300">
+    <div className="flex p-4 hover:backdrop-opacity-5 hover:backdrop-invert hover:bg-sky/5 text-white mb-4 rounded-[3px] duration-300">
       <div>
         <div className=" pb-2 mb-2 flex justify-gap gap-4 text-sky-400">
           <div className="font-normal">

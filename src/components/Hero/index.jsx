@@ -21,7 +21,10 @@ function Hero() {
         <h2 className="text-2xl font-medium text-sky-200">
           Full Stack Web Developer
         </h2>
-        <p>Building solutions to manage your business!</p>
+        <p className="lg:max-w-full md:max-w-[60%] sm:max-w-full max-w-[80%]">
+          Helping you build solutions to express your brand identity and
+          effectively manage your business operations!
+        </p>
         <p className="z-10">
           <Navigation />
         </p>
