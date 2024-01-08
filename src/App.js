@@ -15,7 +15,7 @@ function App() {
         className="relative App lg:top-0 bg-slate-900 text-slate-400 max-h-screen font-thin"
       >
         <OrbitalColors />
-        <div className=" mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+        <div className="z-1 mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
           <div id="wrapper" className="lg:flex lg:justify-between lg:gap-4">
             <Hero />
             <main className="pt-20 lg:w-1/2 lg:py-24">
