@@ -1,8 +1,27 @@
 import React from "react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import NavigationItem from "./NavigationItem";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
+const navItems = [
+  { title: "ABOUT", url: "#about" },
+  { title: "EXPERIENCE", url: "#experience" },
+  { title: "PROJECTS", url: "#projects" },
+];
+const navAnimateVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * i,
+    },
+  }),
+};
 function Navigation() {
   const [navOpen, setNavOpen] = useState(false);
   const handleNav = () => {
@@ -11,9 +30,20 @@ function Navigation() {
   return (
     <div>
       <ul className=" lg:flex lg:justify-gap lg:gap-4 hidden">
-        <NavigationItem title="ABOUT" url="#about" />
-        <NavigationItem title="EXPERIENCE" url="#experience" />
-        <NavigationItem title="PROJECTS" url="#projects" />
+        {navItems.map((navItem, i) => (
+          <motion.div
+            variants={navAnimateVariants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={i}
+            key={i}
+          >
+            <NavigationItem title={navItem.title} url={navItem.url} />
+          </motion.div>
+        ))}
       </ul>
       <div onClick={handleNav}>
         {navOpen ? (

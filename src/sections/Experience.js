@@ -1,7 +1,38 @@
 import React from "react";
+import { motion } from "framer-motion";
 import ExperienceCard from "../components/Cards/Experience";
 import Tag from "../components/Tag";
 import Section from "../components/Section";
+const tagAnimateVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * i,
+    },
+  }),
+};
+// const MotionLink = motion.custom(Tag);
+const expTags = {
+  one: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "NodeJs",
+    "React",
+    "PHP",
+    "MySQL",
+    "BootStrap",
+    "TailWind",
+    "NPM",
+    "GIT",
+  ],
+  two: ["SAP HANA", "HTML", "CSS", "JavaScript", "PHP", "MySQL", "BootStrap"],
+};
 
 function Experience() {
   return (
@@ -54,17 +85,23 @@ function Experience() {
             </p>
           </p>
           <div className="mt-2 flex flex-wrap">
-            <Tag tag="HTML" />
-            <Tag tag="CSS" />
-            <Tag tag="JavaScript" />
-            <Tag tag="NodeJs" />
-            <Tag tag="React" />
-            <Tag tag="PHP" />
-            <Tag tag="MySQL" />
-            <Tag tag="BootStrap" />
-            <Tag tag="TailWind" />
-            <Tag tag="NPM" />
-            <Tag tag="GIT" />
+            {expTags.one.map((tag, i) => {
+              console.log(i);
+              return (
+                <motion.div
+                  key={i}
+                  variants={tagAnimateVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  custom={i}
+                >
+                  <Tag tag={tag} />
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </ExperienceCard>
@@ -83,13 +120,23 @@ function Experience() {
             quality standards while adhering to governance protocols.
           </p>
           <div className="mt-2 flex flex-wrap">
-            <Tag tag="SAP HANA" />
-            <Tag tag="HTML" />
-            <Tag tag="CSS" />
-            <Tag tag="JavaScript" />
-            <Tag tag="PHP" />
-            <Tag tag="MySQL" />
-            <Tag tag="BootStrap" />
+            {expTags.two.map((tag, i) => {
+              console.log(i);
+              return (
+                <motion.div
+                  key={i}
+                  variants={tagAnimateVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  custom={i}
+                >
+                  <Tag tag={tag} />
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </ExperienceCard>

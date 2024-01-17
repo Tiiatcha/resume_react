@@ -1,6 +1,21 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Tag from "../Tag";
 import link from "../../assets/icons8-link-24.png";
+
+const tagAnimateVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: (i) => ({
+      delay: 0.05 * i,
+    }),
+  },
+};
 
 function Project({
   image,
@@ -37,7 +52,17 @@ function Project({
         <Contribution contribution={contribution} />
         <div className="flex justify-gap">
           {tags.map((tag, i) => (
-            <Tag tag={tag} key={i} />
+            <motion.Tag
+              variants={tagAnimateVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={i}
+              tag={tag}
+              key={i}
+            />
           ))}
         </div>
       </div>

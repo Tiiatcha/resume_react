@@ -8,7 +8,7 @@ function Hero() {
     <header
       id="header"
       className="md:h-auto 
-    lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24
+    lg:sticky lg:top-0 lg:flex lg:max-h-[100svh] lg:w-1/2 lg:flex-col lg:justify-between lg:py-24
     "
     >
       <div className="flex flex-col justify-gap gap-4">
