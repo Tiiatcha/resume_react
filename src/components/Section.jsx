@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const sectionTitleAnimateVariants = {
   initial: {
-    x: 150,
+    x: 80,
     opacity: 0,
   },
   animate: {
@@ -17,7 +17,7 @@ const sectionTitleAnimateVariants = {
 
 function Section({ id, title, children }) {
   return (
-    <div id={id} className="mb-20">
+    <div id={id} className="mb-20 max-w-full overflow-hidden">
       <motion.h4
         variants={sectionTitleAnimateVariants}
         initial="initial"
