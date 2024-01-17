@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const sectionTitleAnimateVariants = {
   initial: {
-    x: 500,
+    x: 150,
     opacity: 0,
   },
   animate: {
