@@ -10,6 +10,7 @@ const navItems = [
   { title: "EXPERIENCE", url: "#experience" },
   { title: "PROJECTS", url: "#projects" },
   { title: "DOWNLOAD CV", url: cv, target: "_blank" },
+  { title: "GITHUB", url: "https://github.com/Tiiatcha", target: "_blank" },
 ];
 const navAnimateVariants = {
   initial: {
