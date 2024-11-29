@@ -73,17 +73,14 @@ function Navigation() {
         `}
       >
         <ul className=" lg:flex lg:justify-gap lg:gap-4 relative p-4 pt-20">
-          <NavigationItem title="ABOUT" url="#about" onClick={handleNav} />
-          <NavigationItem
-            title="EXPERIENCE"
-            url="#experience"
-            onClick={handleNav}
-          />
-          <NavigationItem
-            title="PROJECTS"
-            url="#projects"
-            onClick={handleNav}
-          />
+          {navItems.map((navItem, i) => (
+            <NavigationItem
+              title={navItem.title}
+              url={navItem.url}
+              onClick={handleNav}
+              target={navItem.target}
+            />
+          ))}
         </ul>
       </div>
     </div>
