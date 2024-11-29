@@ -1,6 +1,6 @@
 import React from "react";
 
-function NavigationItem({ title, url, onClick }) {
+function NavigationItem({ title, url, target, onClick }) {
   return (
     <li
       className="cursor-pointer 
@@ -14,7 +14,7 @@ function NavigationItem({ title, url, onClick }) {
      border-b border-slate-800
      flex justify-start"
     >
-      <a href={url} onClick={onClick} className="h-full w-full">
+      <a href={url} onClick={onClick} target={target} className="h-full w-full">
         {title}
       </a>
     </li>

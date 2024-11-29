@@ -3,11 +3,13 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import NavigationItem from "./NavigationItem";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import cv from "../../assets/documents/Craig Davison CV Oct 2024.pdf";
 
 const navItems = [
   { title: "ABOUT", url: "#about" },
   { title: "EXPERIENCE", url: "#experience" },
   { title: "PROJECTS", url: "#projects" },
+  { title: "DOWNLOAD CV", url: cv, target: "_blank" },
 ];
 const navAnimateVariants = {
   initial: {
@@ -41,7 +43,11 @@ function Navigation() {
             custom={i}
             key={i}
           >
-            <NavigationItem title={navItem.title} url={navItem.url} />
+            <NavigationItem
+              title={navItem.title}
+              url={navItem.url}
+              target={navItem.target}
+            />
           </motion.div>
         ))}
       </ul>
