@@ -30,13 +30,99 @@ const expTags = {
     "TailWind",
     "NPM",
     "GIT",
+    "WordPress",
+    "DevOps",
+    "CI/CD",
+    "Docker",
   ],
-  two: ["SAP HANA", "HTML", "CSS", "JavaScript", "PHP", "MySQL", "BootStrap"],
+  two: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "NodeJs",
+    "React",
+    "PHP",
+    "MySQL",
+    "BootStrap",
+    "TailWind",
+    "NPM",
+    "GIT",
+  ],
+  three: ["SAP HANA", "HTML", "CSS", "JavaScript", "PHP", "MySQL", "BootStrap"],
 };
 
 function Experience() {
   return (
     <Section id="experience" title="Experience">
+      <ExperienceCard
+        from="January 2024"
+        to="Present"
+        company="Ncodein.com"
+        title="Founder & Owner"
+      >
+        <div>
+          <p className="mb-4">
+            After taking redundancy from my previous role at Cadent, I followed
+            my passion for web development by founding Ncodeing, a website
+            development business. I have since worked on a variety of client
+            projects, including website builds and infrastructure-related tasks,
+            while also exploring DevOps practices to broaden my technical
+            expertise. When time allows, I focus on personal projects, writing
+            blogs, creating tutorials, and producing video content for YouTube
+            to share knowledge and engage with the developer community.
+          </p>
+          <p className="mb-4">
+            <h2 className="text-lg">Key Tasks and responsibilities</h2>
+            <p className="mb-4">
+              <ul className="pl-4 list-disc list-outside">
+                <li>
+                  Building and maintaining websites for clients, focusing on
+                  functionality, performance, and user experience.
+                </li>
+                <li>
+                  Managing wider infrastructure projects, incorporating DevOps
+                  practices such as containerization and CI/CD pipelines.
+                </li>
+                <li>
+                  Collaborating with clients to gather requirements, provide
+                  technical guidance, and deliver tailored solutions.
+                </li>
+                <li>
+                  Developing custom plugins, themes, and integrations for
+                  WordPress and other platforms to meet unique client needs.
+                </li>
+                <li>
+                  Producing blog posts, tutorials, and video content on web
+                  development topics, contributing to the developer community.
+                </li>
+                <li>
+                  Continuously researching and adopting modern development
+                  techniques and tools to ensure high-quality deliverables.
+                </li>
+              </ul>
+            </p>
+          </p>
+          <div className="mt-2 flex flex-wrap">
+            {expTags.one.map((tag, i) => {
+              console.log(i);
+              return (
+                <motion.div
+                  key={i}
+                  variants={tagAnimateVariants}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                  custom={i}
+                >
+                  <Tag tag={tag} />
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </ExperienceCard>
       <ExperienceCard
         from="2017"
         to="Aug 2023"
@@ -120,7 +206,7 @@ function Experience() {
             quality standards while adhering to governance protocols.
           </p>
           <div className="mt-2 flex flex-wrap">
-            {expTags.two.map((tag, i) => {
+            {expTags.three.map((tag, i) => {
               console.log(i);
               return (
                 <motion.div

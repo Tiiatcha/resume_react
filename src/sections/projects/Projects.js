@@ -6,6 +6,52 @@ function Projects() {
   return (
     <Section id="projects" title="Projects">
       <Project
+        date="May 2024"
+        title="Flourish with Phoenix"
+        url="https://flourishwithphoenix.co.uk"
+        type="Brochure Site"
+        problem={
+          <p className="mb-4">
+            The Phoenix Foundation, a Leicester-based charity supporting young
+            people with additional needs and their families, approached me in
+            February 2024 to create a brochure-style website for their new
+            project, Flourish with Phoenix. The primary goal was to design a
+            site that was easy to navigate, allowing parents and carers to
+            quickly find relevant information. Additionally, the project
+            required a document library for other service providers, accessible
+            only to registered users. As the Foundation already had experience
+            with WordPress, they requested the new site be built on the same
+            platform for consistency and ease of use.
+          </p>
+        }
+        solution={
+          <>
+            <p className="mb-4">
+              To meet the client's needs, I developed the site using WordPress,
+              leveraging Bricks Builder to create a user-friendly, visually
+              appealing design. This approach allowed the client to make content
+              updates independently without needing coding knowledge, while
+              providing me with the flexibility to implement custom solutions.
+            </p>
+            <p className="mb-4">
+              To address the document library requirement, I built a custom
+              plugin enabling the client to upload and categorize documents. A
+              custom page template was then created to display these documents
+              in an organized and user-friendly format. Additionally, I
+              developed a custom registration form for users to gain secure
+              access to the library.
+            </p>
+            <p className="mb-4">
+              The site was built with a mobile-first approach, ensuring a
+              responsive design optimized for a wide range of devices. Rigorous
+              testing across multiple platforms confirmed that the site
+              delivered an excellent user experience for all visitors.
+            </p>
+          </>
+        }
+        tags={["React", "JavaScript"]}
+      />
+      <Project
         date="July 2022"
         title="CEASE Hair Salon"
         url="https://ceasesalon.co.uk"
